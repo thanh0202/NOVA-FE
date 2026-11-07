@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Văn bản cho khôi phục tài khoản và tạo mật khẩu mới. -->
+<resources>
+    <string name="recovery_back">Quay lại</string>
+    <string name="recovery_help">Trợ giúp</string>
+    <string name="recovery_step">BƯỚC 3 / 3</string>
+    <string name="recovery_title">Tạo mật khẩu mới</string>
+    <string name="recovery_intro">Đặt mật khẩu mới để bảo vệ tài khoản và tiếp tục trải nghiệm cùng NOVA.</string>
+    <string name="recovery_new_password">Mật khẩu mới</string>
+    <string name="recovery_confirm_password">Xác nhận mật khẩu mới</string>
+    <string name="recovery_password_hint">Mật khẩu từ 8–128 ký tự, có chữ hoa, chữ thường, số và ký tự đặc biệt.</string>
+    <string name="recovery_show_password">Hiện mật khẩu</string>
+    <string name="recovery_update">Cập nhật mật khẩu</string>
+    <string name="recovery_login">Đã nhớ mật khẩu? Đăng nhập</string>
+    <string name="recovery_security">Khôi phục an toàn, bảo vệ tài khoản của bạn</string>
+</resources>

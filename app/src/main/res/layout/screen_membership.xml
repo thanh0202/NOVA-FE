@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp hạng, điểm tích lũy, tiến độ lên hạng và lịch sử điểm. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_membership_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_membership">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/membership_card"
+        android:background="@drawable/nova_hero_gradient"
+        android:padding="16dp"
+        android:elevation="1dp"
+        android:clickable="true"
+        android:focusable="true">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_white"
+            android:textStyle="bold"
+            android:text="@string/screen_nova_membership"/>
+        <Space android:layout_width="1dp" android:layout_height="24dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:textColor="@color/nova_white"
+            android:textStyle="bold"
+            android:id="@+id/membership_tier"
+            tools:text="Thành viên Bạc"/>
+        <Space android:layout_width="1dp" android:layout_height="18dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/nova_white"
+            android:textStyle="bold"
+            android:id="@+id/membership_points"
+            tools:text="240 điểm tích lũy"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_on_blue_muted"
+            android:textStyle="normal"
+            android:text="@string/screen_dac_quyen_danh_rieng_cho_ban"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:elevation="1dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            android:text="@string/screen_hanh_trinh_nang_hang"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            android:textStyle="normal"
+            android:id="@+id/membership_next_tier"
+            tools:text="Còn 260 điểm để lên hạng Vàng"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/membership_progress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="1000"
+            tools:progress="48"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_brand"
+            android:textStyle="bold"
+            android:id="@+id/membership_qualifying"
+            tools:text="240 / 500 điểm"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:id="@+id/membership_benefits"
+        android:text="@string/screen_kham_pha_cac_hang_quyen_loi"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:text="@string/screen_lich_su_tich_diem"/>
+    <Space android:layout_width="1dp" android:layout_height="14dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/membership_history">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_membership_membership_history"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

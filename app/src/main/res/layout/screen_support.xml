@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp bài hướng dẫn, mở nội dung và điều hướng tới chat. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_support_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_support">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_hero_gradient"
+        android:padding="16dp"
+        android:elevation="1dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textColor="@color/nova_white"
+            android:textStyle="bold"
+            android:text="@string/screen_nova_luon_san_sang"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/nova_on_blue_muted"
+            android:textStyle="normal"
+            android:text="@string/screen_tim_cau_tra_loi_hoac_tro_chuyen_voi_doi_ngu_ho_tro"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/support_chat" android:text="@string/screen_chat_voi_nova"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:text="@string/screen_cau_hoi_thuong_gap"/>
+    <Space android:layout_width="1dp" android:layout_height="14dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/support_articles">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_support_support_articles"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

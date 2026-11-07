@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Dòng sản phẩm thứ hai của giỏ hàng. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/nova_card"
+    android:padding="16dp"
+    android:elevation="1dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:baselineAligned="false">
+        <ImageView
+            android:id="@+id/cart_item_image"
+            android:layout_width="88dp"
+            android:layout_height="92dp"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/screen_anh_san_pham"
+            tools:src="@drawable/category_photo_phone"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:paddingStart="12dp"
+            android:paddingEnd="0dp">
+            <TextView
+                style="@style/NovaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/nova_ink"
+                android:textStyle="bold"
+                android:id="@+id/cart_item_name"
+                tools:text="Apple iPhone 16"/>
+            <Space android:layout_width="1dp" android:layout_height="6dp"/>
+            <TextView
+                style="@style/NovaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="11sp"
+                android:textColor="@color/nova_muted"
+                android:textStyle="normal"
+                android:id="@+id/cart_item_variant"
+                tools:text="Xanh · 128 GB"/>
+            <Space android:layout_width="1dp" android:layout_height="8dp"/>
+            <TextView
+                style="@style/NovaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/nova_brand"
+                android:textStyle="bold"
+                android:id="@+id/cart_item_price"
+                tools:text="19.990.000₫"/>
+        </LinearLayout>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:baselineAligned="false">
+        <TextView
+            style="@style/NovaButtonSecondary"
+            android:id="@+id/cart_item_minus"
+            android:text="@string/screen_symbol_45"
+            android:layout_width="42dp"
+            android:layout_height="40dp"
+            android:minHeight="40dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            android:id="@+id/cart_item_quantity"
+            android:gravity="center"
+            tools:text="  1  "/>
+        <TextView
+            style="@style/NovaButtonSecondary"
+            android:id="@+id/cart_item_plus"
+            android:text="@string/screen_symbol_46"
+            android:layout_width="42dp"
+            android:layout_height="40dp"
+            android:minHeight="40dp"/>
+        <Space android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_brand"
+            android:textStyle="bold"
+            android:text="@string/screen_xoa"
+            android:id="@+id/cart_item_remove"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+</LinearLayout>

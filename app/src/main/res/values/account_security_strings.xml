@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nhãn và thông báo cho thông tin cá nhân và thao tác bảo mật tài khoản. -->
+<resources>
+    <string name="account_change_email">Đổi email</string>
+    <string name="password_requirements">Mật khẩu từ 8–128 ký tự, có chữ hoa, chữ thường, số và ký tự đặc biệt.</string>
+    <string name="nova_account_edit_profile">Sửa thông tin cá nhân →</string>
+</resources>

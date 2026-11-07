@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Danh sách thông báo mẫu. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Đơn hàng đang được giao"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="NOVA-1024 sẽ đến trong hôm nay.&#10;5 phút trước"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Ưu đãi dành cho bạn"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Dùng mã NOVA100 để giảm giá cho đơn đủ điều kiện.&#10;Hôm qua"/>
+    </LinearLayout>
+</LinearLayout>

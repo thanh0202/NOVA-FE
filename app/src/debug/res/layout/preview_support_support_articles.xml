@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Các bài hỗ trợ và câu hỏi mẫu. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Làm sao để theo dõi đơn hàng?"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Mở Tài khoản, chọn Đơn hàng của tôi."/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Chính sách đổi trả"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Xem điều kiện và thời hạn áp dụng."/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Các phương thức thanh toán"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Kiểm tra phương thức hiện có trong bước thanh toán."/>
+    </LinearLayout>
+</LinearLayout>

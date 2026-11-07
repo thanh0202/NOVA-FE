@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Dải hai hàng ô danh mục. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content" android:layout_height="wrap_content"
+    android:orientation="horizontal" android:baselineAligned="false">
+    <LinearLayout android:layout_width="100dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_accessory" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Phụ kiện"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_phone" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Điện thoại Android"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="100dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_audio" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Âm thanh"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_laptop" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Laptop mỏng nhẹ"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="100dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_laptop" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Laptop"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_tablet" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Máy tính bảng Wi-Fi"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="100dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_phone" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Điện thoại"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_audio" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Tai nghe"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="100dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_tablet" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Máy tính bảng"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_watch" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Đồng hồ đeo tay"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="100dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_watch" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Đồng hồ thông minh"/>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_accessory" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="Bàn phím và bao da"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:layout_width="100dp" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:gravity="center" android:padding="6dp"
+            android:background="@drawable/nova_home_category_touch">
+            <FrameLayout android:layout_width="52dp" android:layout_height="52dp"
+                android:background="@drawable/nova_category_photo">
+                <ImageView android:layout_width="46dp" android:layout_height="46dp"
+                    android:layout_gravity="center" android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_phone" android:importantForAccessibility="no"/>
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="5dp" android:textSize="11sp" android:textStyle="bold"
+                android:gravity="center" android:minLines="2" android:maxLines="2" android:ellipsize="end"
+                tools:text="iPhone"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

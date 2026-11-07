@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Cấu hình debug cho phép HTTP cục bộ với 10.0.2.2, localhost hoặc 127.0.0.1 để kiểm thử. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors><certificates src="system" /></trust-anchors>
+    </base-config>
+    <!-- Local fixture API only; production HTTPS policy stays in src/main. -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain>127.0.0.1</domain>
+        <domain>10.0.2.2</domain>
+    </domain-config>
+</network-security-config>

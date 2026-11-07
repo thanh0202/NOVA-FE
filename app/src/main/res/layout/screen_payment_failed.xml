@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Hiển thị lỗi hoặc hết hạn và cho phép kiểm tra hoặc tạo lại giao dịch khi phù hợp. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_payment_failed_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_payment_failed">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="!"
+        android:gravity="center"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        android:textColor="#FFB42318"
+        android:layout_marginTop="24dp"
+        android:importantForAccessibility="no"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_failed_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Đang kiểm tra thanh toán"
+        android:gravity="center"
+        android:textSize="26sp"
+        android:textStyle="bold"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_failed_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Đang lấy trạng thái giao dịch từ máy chủ…"
+        android:gravity="center"
+        android:textSize="14sp"
+        android:textColor="@color/nova_muted"
+        android:lineSpacingMultiplier="1.25"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="24dp"
+        android:padding="20dp"
+        android:background="@drawable/nova_card">
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/payment_failed_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Đơn hàng NOVA-1024"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/payment_failed_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/nova_brand"
+            tools:text="5.990.000₫"/>
+    </LinearLayout>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_failed_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFB42318"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:accessibilityLiveRegion="polite"
+        tools:text="Phiên thanh toán đã hết hạn."/>
+    <TextView
+        style="@style/NovaButtonPrimary"
+        android:id="@+id/payment_failed_retry"
+        android:layout_marginTop="24dp"
+        android:text="Thử lại thanh toán"
+        android:enabled="false"
+        android:alpha="0.55"/>
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:id="@+id/payment_failed_refresh"
+        android:layout_marginTop="12dp"
+        android:text="Kiểm tra trạng thái"/>
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:id="@+id/payment_failed_order"
+        android:layout_marginTop="12dp"
+        android:text="Xem đơn hàng"
+        android:enabled="false"
+        android:alpha="0.55"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"
+        android:text="NOVA chỉ ghi nhận thanh toán khi máy chủ xác nhận. Nếu bạn đã bị trừ tiền, kiểm tra lại trạng thái hoặc liên hệ hỗ trợ trước khi thanh toán tiếp."/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+</LinearLayout>

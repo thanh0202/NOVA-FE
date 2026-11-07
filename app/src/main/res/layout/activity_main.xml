@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Khung chứa tiêu đề, nội dung cuộn và vùng chân trang do MainActivity điều phối. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nova_bg"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/main_header_host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <ScrollView
+        android:id="@+id/main_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <!-- Vùng MainActivity gắn layout của Screen hiện tại khi route thay đổi. -->
+        <LinearLayout
+            android:id="@+id/main_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/nova_page_inset"
+            android:paddingTop="8dp"
+            android:paddingEnd="@dimen/nova_page_inset"
+            android:paddingBottom="@dimen/nova_page_inset" />
+    </ScrollView>
+
+    <!-- Vùng chứa thanh điều hướng hoặc các hành động chân màn hình. -->
+    <LinearLayout
+        android:id="@+id/main_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+</LinearLayout>

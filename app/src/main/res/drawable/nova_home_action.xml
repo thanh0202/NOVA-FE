@@ -1,0 +1,2 @@
+<!-- NOVA: Hiệu ứng phản hồi khi chạm lên một thành phần giao diện. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#120067EC"><item><shape><solid android:color="#FFFFFF"/><corners android:radius="16dp"/></shape></item></ripple>

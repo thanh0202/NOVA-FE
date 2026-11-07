@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Dãy chỉ báo trang bên dưới banner. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <View
+            android:layout_width="16dp"
+            android:layout_height="4dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/nova_hero_pill"
+            android:backgroundTint="@color/nova_blue"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/nova_hero_pill"
+            android:backgroundTint="@color/nova_border"/>
+        <View
+            android:layout_width="5dp"
+            android:layout_height="4dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/nova_hero_pill"
+            android:backgroundTint="@color/nova_border"/>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<!-- NOVA: Khai báo ID tài nguyên dùng cho phần giao diện danh mục. -->
+<resources>
+    <item name="category_image_url" type="id" />
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Tải nhận xét, lọc theo số sao và mở sửa đánh giá thuộc tài khoản hiện tại. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_product_reviews_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_product_reviews">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="18dp">
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/product_reviews_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải sản phẩm…"
+            android:textSize="20sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Sony WH-1000XM5"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/product_reviews_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải đánh giá…"
+            android:textSize="18sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="★ 4,9  ·  128 đánh giá"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lọc theo số sao"
+        android:textSize="13sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:fillViewport="true">
+        <RadioGroup
+            android:id="@+id/product_reviews_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:checkedButton="@id/product_reviews_all">
+            <RadioButton
+                android:id="@+id/product_reviews_all"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="Tất cả"
+                android:textSize="12sp"/>
+            <RadioButton
+                android:id="@+id/product_reviews_five"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="5 ★"
+                android:textSize="12sp"/>
+            <RadioButton
+                android:id="@+id/product_reviews_four"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="4 ★"
+                android:textSize="12sp"/>
+            <RadioButton
+                android:id="@+id/product_reviews_three"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="3 ★"
+                android:textSize="12sp"/>
+            <RadioButton
+                android:id="@+id/product_reviews_two"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="2 ★"
+                android:textSize="12sp"/>
+            <RadioButton
+                android:id="@+id/product_reviews_one"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="1 ★"
+                android:textSize="12sp"/>
+        </RadioGroup>
+    </HorizontalScrollView>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_product_reviews_screen_body"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/product_reviews_detail" android:text="Xem thông tin sản phẩm"/>
+</LinearLayout>

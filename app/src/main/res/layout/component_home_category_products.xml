@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Bố cục component_home_category_products với thẻ gốc LinearLayout; Java tìm các View qua ID để gắn dữ liệu và sự kiện. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_category_browser" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical" android:baselineAligned="false">
+        <TextView style="@style/NovaText" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:text="Sản phẩm theo danh mục" android:textStyle="bold" android:textSize="19sp"/>
+        <TextView android:id="@+id/home_category_product_all" style="@style/NovaText"
+            android:layout_width="wrap_content" android:layout_height="48dp" android:gravity="center"
+            android:paddingStart="8dp" android:text="Xem tất cả →" android:textSize="11sp"
+            android:textColor="@color/nova_blue" android:clickable="true" android:focusable="true"/>
+    </LinearLayout>
+    <!-- HomeCategoryBrowser thêm đủ danh mục gốc tại đây theo ba ô mỗi hàng. -->
+    <LinearLayout android:id="@+id/home_product_roots"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:background="#FFFFFF"/>
+    <!-- Dải nhóm con thay đổi theo danh mục gốc; vẫn cho cuộn ngang khi có nhiều mục. -->
+    <HorizontalScrollView android:id="@+id/home_product_children_scroll"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+        android:visibility="gone" android:scrollbars="none" android:overScrollMode="never">
+        <LinearLayout android:id="@+id/home_product_children" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false"/>
+    </HorizontalScrollView>
+    <!-- Dải chip thương hiệu do API /brands cung cấp; chọn chip sẽ tải lại sản phẩm. -->
+    <HorizontalScrollView android:id="@+id/home_product_brands_scroll"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp"
+        android:visibility="gone" android:scrollbars="none" android:overScrollMode="never">
+        <LinearLayout android:id="@+id/home_product_brands" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:orientation="horizontal" android:baselineAligned="false"/>
+    </HorizontalScrollView>
+    <!-- Trạng thái đang tải/lỗi/thử lại; không thay thế dữ liệu JSON sản phẩm. -->
+    <TextView android:id="@+id/home_category_product_status" style="@style/NovaText"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:layout_marginTop="12dp" android:paddingVertical="12dp" android:textSize="13sp"
+        android:textColor="@color/nova_muted" android:text="Đang tải danh mục…" android:accessibilityLiveRegion="polite"/>
+    <!-- Lưới hai cột được BaseScreen.productGrid dựng từ các phần tử items của API. -->
+    <LinearLayout android:id="@+id/home_category_product_grid" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="vertical"/>
+    <!-- Nút mở trang products với danh mục và thương hiệu đang chọn. -->
+    <TextView android:id="@+id/home_category_product_more" style="@style/NovaButtonSecondary"
+        android:layout_width="match_parent" android:layout_height="48dp"
+        android:layout_marginTop="4dp" android:text="Xem thêm sản phẩm →" android:visibility="gone"/>
+</LinearLayout>

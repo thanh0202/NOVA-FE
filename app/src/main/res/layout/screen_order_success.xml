@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Hiển thị mã đơn, số tiền và phương thức. Mở chi tiết hoặc quay lại mua sắm. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_order_success_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_order_success">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✓"
+        android:textSize="72sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="26dp"
+        android:paddingBottom="20dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/order_success_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đặt hàng thành công"
+        android:textSize="25sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/order_success_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cảm ơn bạn đã mua sắm tại Nova. Đơn hàng đã được tiếp nhận và sẽ được xử lý trong thời gian sớm nhất."
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"
+        android:gravity="center"/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="18dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MÃ ĐƠN HÀNG"
+            android:textSize="10sp"
+            android:textColor="@color/nova_muted"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/order_success_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải…"
+            android:textSize="18sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Đơn hàng NOVA-1024"/>
+        <Space android:layout_width="1dp" android:layout_height="16dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng thanh toán"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"/>
+        <Space android:layout_width="1dp" android:layout_height="6dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/order_success_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textSize="23sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="5.990.000₫"/>
+        <Space android:layout_width="1dp" android:layout_height="16dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/order_success_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải phương thức thanh toán…"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Thanh toán khi nhận hàng"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/order_success_detail" android:text="Xem đơn hàng"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/order_success_shopping" android:text="Tiếp tục mua sắm"/>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+</LinearLayout>

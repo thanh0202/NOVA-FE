@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp danh sách đơn và lọc theo trạng thái. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_orders_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_orders">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:paddingHorizontal="12dp"
+        android:textColor="@color/nova_brand"
+        android:textSize="12sp"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/orders_refresh"
+        android:text="↻  Làm mới"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:baselineAligned="false"
+            android:id="@+id/orders_tabs">
+            <ViewStub
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="nova_preview"
+                tools:layout="@layout/preview_orders_orders_tabs"
+                tools:visibility="visible"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/orders_list">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_orders_orders_list"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

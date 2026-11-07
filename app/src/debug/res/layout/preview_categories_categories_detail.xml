@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nội dung bên phải gồm danh mục con, thương hiệu và khoảng giá. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Điện thoại"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Danh mục con"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/nova_category_card">
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_phone"
+                    android:importantForAccessibility="no"
+                    android:layout_gravity="center"/>
+                <Space android:layout_width="1dp" android:layout_height="5dp"/>
+                <TextView
+                    style="@style/NovaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/nova_ink"
+                    android:textStyle="bold"
+                    tools:text="iPhone"
+                    android:gravity="center"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="88dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/nova_category_card">
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:scaleType="fitCenter"
+                    tools:src="@drawable/category_photo_phone"
+                    android:importantForAccessibility="no"
+                    android:layout_gravity="center"/>
+                <Space android:layout_width="1dp" android:layout_height="5dp"/>
+                <TextView
+                    style="@style/NovaText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/nova_ink"
+                    android:textStyle="bold"
+                    tools:text="Android"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView
+                style="@style/NovaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/nova_ink"
+                android:textStyle="bold"
+                tools:text="Thương hiệu"/>
+            <Space android:layout_width="1dp" android:layout_height="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+                <TextView
+                    style="@style/NovaText"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:textSize="11sp"
+                    android:textColor="@color/nova_blue"
+                    android:textStyle="bold"
+                    tools:text="Apple"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/nova_secondary_button"/>
+                <TextView
+                    style="@style/NovaText"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:textSize="11sp"
+                    android:textColor="@color/nova_muted"
+                    tools:text="Samsung"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/nova_card"/>
+            </LinearLayout>
+        </LinearLayout>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+            <TextView
+                style="@style/NovaText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/nova_ink"
+                android:textStyle="bold"
+                tools:text="Phân khúc giá"/>
+            <Space android:layout_width="1dp" android:layout_height="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+                <TextView
+                    style="@style/NovaText"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:textSize="11sp"
+                    android:textColor="@color/nova_blue"
+                    android:textStyle="bold"
+                    tools:text="Dưới 7 triệu"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/nova_secondary_button"/>
+                <TextView
+                    style="@style/NovaText"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:textSize="11sp"
+                    android:textColor="@color/nova_muted"
+                    tools:text="Trên 20 triệu"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginEnd="5dp"
+                    android:background="@drawable/nova_card"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

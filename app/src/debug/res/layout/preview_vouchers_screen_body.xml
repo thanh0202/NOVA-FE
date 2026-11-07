@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Danh sách voucher minh họa. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <include layout="@layout/item_voucher"/>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <include layout="@layout/preview_voucher_shipping"/>
+</LinearLayout>

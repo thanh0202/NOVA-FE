@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp khung giờ, giá, số lượng còn lại, đếm ngược và xử lý nhắc ưu đãi. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_flash_sale_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_flash_sale">
+    <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content" android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:baselineAligned="false"
+            android:id="@+id/flash_tabs">
+            <ViewStub
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="nova_preview"
+                tools:layout="@layout/preview_flash_sale_flash_tabs"
+                tools:visibility="visible"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/flash_detail">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_flash_sale_flash_detail"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

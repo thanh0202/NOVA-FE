@@ -1,0 +1,5 @@
+<!-- NOVA: Icon vector: pathData và màu dựng hình độc lập độ phân giải. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="34dp" android:height="34dp" android:viewportWidth="34" android:viewportHeight="34">
+    <path android:fillColor="#0067EC" android:pathData="M10,0 H24 Q34,0 34,10 V24 Q34,34 24,34 H10 Q0,34 0,24 V10 Q0,0 10,0" />
+    <path android:fillColor="@android:color/transparent" android:strokeColor="#FFFFFF" android:strokeWidth="3" android:strokeLineCap="round" android:pathData="M7,27 V7 L27,27 V7" />
+</vector>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Kiểm tra và áp dụng thương hiệu, khoảng giá và tùy chọn còn hàng khi chế độ hỗ trợ. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ns0="http://schemas.android.com/tools"
+    android:id="@+id/screen_product_filters_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" ns0:context=".MainActivity" ns0:showIn="@layout/preview_screen_product_filters">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn thương hiệu và khoảng giá phù hợp"
+        android:textColor="@color/nova_muted"
+        android:textSize="13sp"
+        android:layout_marginBottom="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:background="@drawable/nova_card"
+        android:layout_marginBottom="12dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thương hiệu"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"/>
+        <EditText
+            android:id="@+id/filter_brand"
+            style="@style/NovaField"
+            android:inputType="textCapWords"
+            android:hint="Tất cả thương hiệu"
+            android:maxLength="100"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:background="@drawable/nova_card"
+        android:layout_marginBottom="12dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Khoảng giá"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="6dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đơn vị: ₫"
+            android:textColor="@color/nova_muted"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/filter_min"
+                style="@style/NovaField"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="Từ"
+                android:inputType="number"
+                android:maxLength="13"/>
+            <EditText
+                android:id="@+id/filter_max"
+                style="@style/NovaField"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:hint="Đến"
+                android:inputType="number"
+                android:maxLength="13"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/filter_priority"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:background="@drawable/nova_card">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ưu tiên mua sắm"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+        <CheckBox
+            android:id="@+id/filter_available"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang có hàng"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp">
+        <TextView
+            android:id="@+id/filter_reset"
+            style="@style/NovaButtonSecondary"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Đặt lại"/>
+        <TextView
+            android:id="@+id/filter_apply"
+            style="@style/NovaButtonPrimary"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginStart="8dp"
+            android:text="Áp dụng bộ lọc"/>
+    </LinearLayout>
+</LinearLayout>

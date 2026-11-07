@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Các thẻ quyền lợi theo hạng. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Hạng Bạc  ·  Hạng hiện tại"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Tích điểm trên mỗi đơn hàng và nhận ưu đãi thành viên."/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Hạng Vàng"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Từ 500 điểm. Thêm ưu đãi và quyền lợi theo hạng."/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Hạng Kim cương"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Từ 1.500 điểm. Quyền lợi thành viên cao nhất."/>
+    </LinearLayout>
+</LinearLayout>

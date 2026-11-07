@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Các trường nhập và nút lưu dùng chung cho thêm và sửa địa chỉ. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/address_form_fields"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"
+        android:text="@string/module_address_intro"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_name"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_name"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/address_name"
+        android:inputType="textPersonName"
+        android:autofillHints="personName"
+        tools:text="Nguyễn Minh Anh"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_phone"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_phone"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/address_phone"
+        android:inputType="phone"
+        android:autofillHints="phone"
+        tools:text="0900 000 001"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_province"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_province"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/address_province"
+        android:inputType="text"
+        android:autofillHints="postalAddressRegion"
+        tools:text="TP. Hồ Chí Minh"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_district"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_district"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/address_district"
+        android:inputType="text"
+        android:autofillHints="postalAddressLocality"
+        tools:text="Quận 1"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_ward"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_ward"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/address_ward"
+        android:inputType="text"
+        android:autofillHints="postalAddressExtendedAddress"
+        tools:text="Phường Sài Gòn"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_line"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_line"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/address_line"
+        android:inputType="textPostalAddress"
+        android:autofillHints="streetAddress"
+        tools:text="12 Nguyễn Huệ"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_label"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_label"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/address_label"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        tools:text="Nhà"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_address_note"
+        android:textStyle="bold"
+        android:labelFor="@+id/address_note"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText style="@style/NovaField" android:id="@+id/address_note" android:inputType="text" android:importantForAutofill="no"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <CheckBox
+        android:id="@+id/address_default"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/module_address_default"
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/address_save" android:text="@string/module_address_save"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/screen_body"/>
+</LinearLayout>

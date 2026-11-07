@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp địa chỉ đã lưu, hiển thị mặc định và xử lý mở thêm, sửa hoặc xóa. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_addresses_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_addresses">
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/addresses_add" android:text="@string/screen_them_dia_chi_moi"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/addresses_list">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_addresses_addresses_list"
+            tools:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

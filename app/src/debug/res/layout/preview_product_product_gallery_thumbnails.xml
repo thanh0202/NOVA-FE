@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Ảnh thu nhỏ bên dưới ảnh sản phẩm. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/home_imgnhsnphm"
+        android:importantForAccessibility="no"/>
+    <ImageView
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:scaleType="fitCenter"
+        tools:src="@drawable/node_6_1039_imgnhsnphm"
+        android:importantForAccessibility="no"/>
+</LinearLayout>

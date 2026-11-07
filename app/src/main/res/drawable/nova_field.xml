@@ -1,0 +1,13 @@
+<!-- NOVA: Các trạng thái drawable được chọn theo trạng thái View. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"><shape android:shape="rectangle">
+        <solid android:color="@color/nova_white" />
+        <corners android:radius="@dimen/nova_field_radius" />
+        <stroke android:width="2dp" android:color="#75A7F5" />
+    </shape></item>
+    <item><shape android:shape="rectangle">
+        <solid android:color="#FCFDFF" />
+        <corners android:radius="@dimen/nova_field_radius" />
+        <stroke android:width="1dp" android:color="@color/nova_border" />
+    </shape></item>
+</selector>

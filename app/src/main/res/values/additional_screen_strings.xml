@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Văn bản cho các màn bổ sung như địa chỉ, thanh toán và đơn hàng. -->
+<resources>
+    <string name="module_search_query">Bạn đang tìm công nghệ gì?</string>
+    <string name="module_search_query_hint">Tên sản phẩm hoặc thương hiệu</string>
+    <string name="module_search_submit">Tìm kiếm</string>
+    <string name="module_search_history">Lịch sử tìm kiếm</string>
+    <string name="module_favorites_intro">Những sản phẩm bạn đã lưu để xem lại và mua sắm.</string>
+    <string name="module_profile_intro">Cập nhật thông tin cá nhân và ảnh đại diện của bạn.</string>
+    <string name="module_profile_name">Họ và tên</string>
+    <string name="module_profile_phone">Số điện thoại</string>
+    <string name="module_profile_gender">Giới tính</string>
+    <string name="module_profile_avatar">URL ảnh đại diện</string>
+    <string name="module_profile_avatar_hint">https://...</string>
+    <string name="module_profile_save">Lưu thay đổi</string>
+    <string name="module_password_intro">Dùng mật khẩu riêng cho tài khoản NOVA của bạn.</string>
+    <string name="module_password_current">Mật khẩu hiện tại</string>
+    <string name="module_password_next">Mật khẩu mới</string>
+    <string name="module_password_next_hint">Tối thiểu 8 ký tự</string>
+    <string name="module_password_repeat">Nhập lại mật khẩu mới</string>
+    <string name="module_password_save">Cập nhật mật khẩu</string>
+    <string name="module_email_intro">Xác minh email mới để bảo vệ tài khoản của bạn.</string>
+    <string name="module_email_new">Email mới</string>
+    <string name="module_email_password">Mật khẩu hiện tại</string>
+    <string name="module_email_submit">Gửi mã xác thực</string>
+    <string name="module_address_intro">Nhập đầy đủ thông tin nhận hàng để NOVA giao đúng địa chỉ.</string>
+    <string name="module_address_name">Họ tên người nhận</string>
+    <string name="module_address_phone">Số điện thoại</string>
+    <string name="module_address_province">Tỉnh / Thành phố</string>
+    <string name="module_address_district">Quận / Huyện</string>
+    <string name="module_address_ward">Phường / Xã</string>
+    <string name="module_address_line">Địa chỉ chi tiết</string>
+    <string name="module_address_label">Nhãn địa chỉ (Nhà / Công ty)</string>
+    <string name="module_address_note">Ghi chú giao hàng</string>
+    <string name="module_address_default">Đặt làm địa chỉ mặc định</string>
+    <string name="module_address_save">Lưu địa chỉ</string>
+    <string name="module_order_detail_intro">Theo dõi đơn hàng, thông tin nhận hàng và tiến trình giao hàng.</string>
+    <string name="module_payment_history_intro">Xem lại các giao dịch, phương thức và trạng thái thanh toán.</string>
+    <string name="module_payment_intro">Kiểm tra số tiền và thông tin giao dịch trước khi thanh toán.</string>
+    <string name="module_returns_intro">Theo dõi yêu cầu đổi trả và các khoản hoàn tiền của bạn.</string>
+    <string name="module_return_detail_intro">Cập nhật tiến trình xử lý yêu cầu đổi trả của bạn.</string>
+    <string name="module_membership_tiers_intro">Khám phá ngưỡng điểm, ưu đãi và quyền lợi của từng hạng thành viên.</string>
+    <string name="module_vouchers_intro">Chọn ưu đãi phù hợp để áp dụng khi thanh toán.</string>
+    <string name="module_notifications_intro">Cập nhật đơn hàng và ưu đãi dành cho bạn.</string>
+    <string name="module_notifications_refresh">Cập nhật thông báo</string>
+    <string name="module_chat_intro">Trao đổi với đội ngũ NOVA về sản phẩm và đơn hàng của bạn.</string>
+    <string name="module_chat_message">Tin nhắn của bạn</string>
+    <string name="module_chat_send">"Gửi tin nhắn  →"</string>
+    <string name="module_chat_refresh">Làm mới hội thoại</string>
+    <string name="module_select_address_intro">Chọn địa chỉ nhận hàng cho đơn hàng đang thanh toán.</string>
+    <string name="module_select_address_add">+ Thêm địa chỉ mới</string>
+</resources>

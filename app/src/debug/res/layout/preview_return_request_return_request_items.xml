@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Món hàng mẫu để chọn khi yêu cầu đổi trả. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Sony WH-1000XM5 · Bạc (1)"
+        tools:checked="true"/>
+</LinearLayout>

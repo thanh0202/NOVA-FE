@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp giỏ, cập nhật số lượng, xóa món hoặc xóa giỏ và chuyển sang đặt hàng. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_cart_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_cart">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"
+        android:textStyle="normal"
+        android:id="@+id/cart_count"
+        tools:text="2 sản phẩm trong giỏ hàng"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/cart_items">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_cart_cart_items"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/cart_summary"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:elevation="1dp">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_cart_cart_summary"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaButtonPrimary"
+        android:id="@+id/cart_checkout"
+        android:text="@string/screen_tien_hanh_thanh_toan"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_brand"
+        android:textStyle="bold"
+        android:text="@string/screen_xoa_toan_bo_gio_hang"
+        android:id="@+id/cart_clear"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:clickable="true"
+        android:focusable="true"/>
+</LinearLayout>

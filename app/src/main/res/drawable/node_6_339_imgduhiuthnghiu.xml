@@ -1,0 +1,2 @@
+<!-- NOVA: Chưa thấy tham chiếu trực tiếp theo tên. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="34dp" android:height="34dp" android:viewportWidth="34.0" android:viewportHeight="34.0"><path android:pathData="M10.0,0.0 H24.0 Q34.0,0.0 34.0,10.0 V24.0 Q34.0,34.0 24.0,34.0 H10.0 Q0.0,34.0 0.0,24.0 V10.0 Q0.0,0.0 10.0,0.0 Z" android:fillColor="#0067EC" /><path android:pathData="M7 27V7L27 27V7" android:fillColor="#00000000" android:strokeColor="#FFFFFF" android:strokeWidth="3" android:strokeLineCap="round" /></vector>

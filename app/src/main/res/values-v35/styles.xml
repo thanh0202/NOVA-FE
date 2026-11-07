@@ -1,0 +1,4 @@
+<!-- NOVA: Biến thể theme từ API 35 với cấu hình thanh điều hướng và edge-to-edge. -->
+<resources>
+    <style name="Theme.Nova" parent="Theme.Nova.Base"><item name="android:windowLightNavigationBar">true</item><item name="android:windowOptOutEdgeToEdgeEnforcement">true</item></style>
+</resources>

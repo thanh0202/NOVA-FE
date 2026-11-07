@@ -1,0 +1,7 @@
+<!-- NOVA: Hiệu ứng phản hồi khi chạm lên một thành phần giao diện. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="#32FFFFFF">
+    <item><shape android:shape="rectangle">
+        <gradient android:angle="270" android:startColor="#2D7AF0" android:endColor="@color/nova_blue" />
+        <corners android:radius="@dimen/nova_button_radius" />
+    </shape></item>
+</ripple>

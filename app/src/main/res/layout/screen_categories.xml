@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Chọn danh mục cha, xem nhóm con, thương hiệu, phân khúc giá và ô sản phẩm nổi bật. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ns0="http://schemas.android.com/tools"
+    android:id="@+id/screen_categories_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" ns0:context=".MainActivity" ns0:showIn="@layout/preview_screen_categories">
+    <TextView
+        android:id="@+id/categories_search"
+        style="@style/NovaButtonSecondary"
+        android:background="@drawable/nova_search"
+        android:drawableStart="@drawable/home_imgsearch"
+        android:drawablePadding="10dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/nova_muted"
+        android:textStyle="normal"
+        android:text="Bạn muốn tìm sản phẩm gì?"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:baselineAligned="false">
+        <LinearLayout
+            android:id="@+id/categories_sidebar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/nova_category_photo">
+            <ViewStub
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="nova_preview" ns0:layout="@layout/preview_categories_categories_sidebar" ns0:visibility="visible"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/categories_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+            <ViewStub
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="nova_preview" ns0:layout="@layout/preview_categories_categories_detail" ns0:visibility="visible"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

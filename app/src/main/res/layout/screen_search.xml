@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Khi ô trống, hiện lịch sử và danh mục. Khi gõ, nạp từ khóa và sản phẩm gợi ý có ảnh, giá. Chạm sản phẩm để mở chi tiết hoặc chuyển sang kết quả đầy đủ. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/preview_screen_search">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:id="@+id/search_back"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            android:background="@drawable/nova_icon_action"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:src="@drawable/ic_nova_form_back"
+            android:contentDescription="@string/nova_search_back"
+            android:focusable="true" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="52dp"
+            android:gravity="center_vertical"
+            android:baselineAligned="false"
+            android:background="@drawable/nova_field"
+            android:paddingStart="12dp"
+            android:paddingEnd="4dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="9dp"
+                android:src="@drawable/ic_nova_search"
+                android:importantForAccessibility="no" />
+
+            <EditText
+                android:id="@+id/search_query"
+                style="@style/NovaText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minHeight="50dp"
+                android:paddingVertical="10dp"
+                android:background="@null"
+                android:hint="@string/nova_search_hint"
+                android:textColorHint="@color/nova_muted"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:inputType="text"
+                android:imeOptions="actionSearch"
+                android:maxLength="150"
+                android:saveEnabled="false"
+                android:importantForAutofill="no"
+                tools:text="Tai nghe" />
+
+            <TextView
+                android:id="@+id/search_clear"
+                style="@style/NovaText"
+                android:layout_width="42dp"
+                android:layout_height="48dp"
+                android:gravity="center"
+                android:text="×"
+                android:textSize="25sp"
+                android:textColor="@color/nova_muted"
+                android:contentDescription="@string/nova_search_clear"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:focusable="true"
+                android:visibility="gone"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search_submit"
+            style="@style/NovaButtonPrimary"
+            android:layout_width="49dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:minHeight="48dp"
+            android:padding="0dp"
+            android:text="@string/nova_search_submit" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/search_scope"
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/nova_muted"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/search_idle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        tools:visibility="gone">
+
+        <LinearLayout
+            style="@style/NovaSearchPanel"
+            android:layout_marginBottom="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:baselineAligned="false">
+                <TextView
+                    style="@style/NovaSearchSectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/nova_search_recent" />
+                <TextView
+                    android:id="@+id/search_history_clear"
+                    style="@style/NovaText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="12dp"
+                    android:text="@string/nova_search_clear_history"
+                    android:textColor="@color/nova_brand"
+                    android:textSize="12sp"
+                    android:focusable="true"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/search_history_rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_category_panel"
+            style="@style/NovaSearchPanel"
+            android:visibility="gone">
+            <TextView
+                style="@style/NovaSearchSectionTitle"
+                android:text="@string/nova_search_categories" />
+            <LinearLayout
+                android:id="@+id/search_category_rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/search_live"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/search_keywords"
+            style="@style/NovaSearchPanel"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+            <TextView
+                style="@style/NovaSearchSectionTitle"
+                android:text="@string/nova_search_keywords" />
+            <LinearLayout
+                android:id="@+id/search_keyword_rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ViewStub
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="nova_preview"
+                    tools:layout="@layout/preview_search_keywords"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/search_products"
+            style="@style/NovaSearchPanel"
+            android:visibility="gone"
+            tools:visibility="visible">
+            <TextView
+                style="@style/NovaSearchSectionTitle"
+                android:text="@string/nova_search_products" />
+            <LinearLayout
+                android:id="@+id/search_product_rows"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ViewStub
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:tag="nova_preview"
+                    tools:layout="@layout/preview_search_screen_body"
+                    tools:visibility="visible" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/search_status"
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/nova_card"
+            android:padding="16dp"
+            android:textColor="@color/nova_muted"
+            android:textSize="13sp"
+            android:visibility="gone"
+            android:accessibilityLiveRegion="polite" />
+        <TextView
+            android:id="@+id/search_retry"
+            style="@style/NovaButtonSecondary"
+            android:layout_marginTop="10dp"
+            android:text="@string/nova_search_retry"
+            android:visibility="gone" />
+        <TextView
+            android:id="@+id/search_show_all"
+            style="@style/NovaButtonSecondary"
+            android:layout_marginTop="12dp"
+            android:text="@string/nova_search_show_all"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </LinearLayout>
+</LinearLayout>

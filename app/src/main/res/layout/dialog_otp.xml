@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Mẫu hộp thoại OTP do hàm dùng chung trong BaseScreen nạp. Luồng hiện tại mở màn screen_otp.xml. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"
+        android:textStyle="normal"
+        android:text="@string/screen_nhap_ma_xac_thuc_duoc_gui_den_email_cua_ban" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="14dp" />
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_brand"
+        android:textStyle="bold"
+        android:id="@+id/otp_development_code"
+        android:visibility="gone" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="14dp" />
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:text="@string/screen_ma_otp"
+        android:labelFor="@+id/otp_code" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="8dp" />
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/otp_code"
+        android:inputType="number"
+        android:importantForAutofill="no" />
+    <Space
+        android:layout_width="1dp"
+        android:layout_height="@dimen/nova_section_gap" />
+</LinearLayout>

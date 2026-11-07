@@ -1,0 +1,9 @@
+<!-- NOVA: Khoảng cách, lề và bán kính bo góc dùng chung. -->
+<resources>
+    <dimen name="nova_page_inset">24dp</dimen>
+    <dimen name="nova_section_gap">18dp</dimen>
+    <dimen name="nova_card_radius">20dp</dimen>
+    <dimen name="nova_button_radius">14dp</dimen>
+    <dimen name="nova_field_radius">14dp</dimen>
+    <dimen name="nova_hero_radius">24dp</dimen>
+</resources>

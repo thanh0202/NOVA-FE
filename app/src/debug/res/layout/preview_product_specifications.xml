@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Thông số kỹ thuật mẫu trong chi tiết sản phẩm. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Thông số kỹ thuật"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Kết nối  ·  Bluetooth&#10;Chống ồn  ·  Chủ động&#10;Thời lượng pin  ·  30 giờ"/>
+    </LinearLayout>
+</LinearLayout>

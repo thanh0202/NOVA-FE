@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Thanh điều hướng mẫu đánh dấu Tài khoản. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="72dp" android:background="@color/nova_white">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:baselineAligned="false" android:orientation="horizontal" android:paddingStart="24dp" android:paddingEnd="24dp">
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:paddingBottom="4dp">
+            <FrameLayout android:layout_width="46dp" android:layout_height="30dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:layout_gravity="center" android:scaleType="fitCenter" android:importantForAccessibility="no" android:src="@drawable/nova_nav_home" android:tint="@color/nova_muted" />
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:ellipsize="end" android:gravity="center" android:lineSpacingExtra="0dp" android:maxLines="1" android:textSize="11sp" tools:text="Trang chủ" android:textColor="@color/nova_muted" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:paddingBottom="4dp">
+            <FrameLayout android:layout_width="46dp" android:layout_height="30dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:layout_gravity="center" android:scaleType="fitCenter" android:importantForAccessibility="no" android:src="@drawable/nova_nav_categories" android:tint="@color/nova_muted" />
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:ellipsize="end" android:gravity="center" android:lineSpacingExtra="0dp" android:maxLines="1" android:textSize="11sp" tools:text="Danh mục" android:textColor="@color/nova_muted" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:paddingBottom="4dp">
+            <FrameLayout android:layout_width="46dp" android:layout_height="30dp">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:layout_gravity="center" android:scaleType="fitCenter" android:importantForAccessibility="no" android:src="@drawable/nova_nav_cart" android:tint="@color/nova_muted" />
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:ellipsize="end" android:gravity="center" android:lineSpacingExtra="0dp" android:maxLines="1" android:textSize="11sp" tools:text="Giỏ hàng" android:textColor="@color/nova_muted" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:gravity="center" android:orientation="vertical" android:paddingBottom="4dp">
+            <FrameLayout android:layout_width="46dp" android:layout_height="30dp" android:background="@drawable/nova_nav_selected">
+                <ImageView android:layout_width="22dp" android:layout_height="22dp" android:layout_gravity="center" android:scaleType="fitCenter" android:importantForAccessibility="no" android:src="@drawable/nova_nav_account" android:tint="@color/nova_blue" />
+            </FrameLayout>
+            <TextView style="@style/NovaText" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:ellipsize="end" android:gravity="center" android:lineSpacingExtra="0dp" android:maxLines="1" android:textSize="11sp" tools:text="Tài khoản" android:textColor="@color/nova_blue" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_gravity="top" android:background="@color/nova_nav_divider" android:importantForAccessibility="no" />
+</FrameLayout>

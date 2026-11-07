@@ -1,0 +1,14 @@
+<!-- NOVA: Bảng màu dùng chung của NOVA. -->
+<resources>
+    <color name="nova_bg">#F7F9FD</color>
+    <color name="nova_ink">#101D35</color>
+    <color name="nova_muted">#728097</color>
+    <color name="nova_blue">#0067EC</color>
+    <color name="nova_brand">#074AA5</color>
+    <color name="nova_tint">#EDF5FF</color>
+    <color name="nova_border">#DBE4F1</color>
+    <color name="nova_white">#FFFFFF</color>
+    <color name="nova_on_blue_muted">#BFDAFF</color>
+    <color name="nova_auth_ink">#062B68</color>
+    <color name="nova_nav_divider">#DFE6F0</color>
+</resources>

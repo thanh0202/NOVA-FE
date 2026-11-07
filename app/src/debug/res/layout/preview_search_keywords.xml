@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Các từ khóa gợi ý khi đang gõ. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_nova_search"
+        android:drawablePadding="12dp"
+        android:textSize="14sp"
+        tools:text="Tai nghe Sony" />
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_nova_search"
+        android:drawablePadding="12dp"
+        android:textSize="14sp"
+        tools:text="Tai nghe AirPods Pro 2" />
+</LinearLayout>

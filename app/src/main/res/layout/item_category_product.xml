@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Ô sản phẩm nổi bật trong màn Danh mục, có ảnh và tên rút gọn. -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:gravity="center_horizontal" android:padding="8dp"
+    android:background="@drawable/nova_category_photo"
+    android:clickable="true" android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView android:id="@+id/category_product_image"
+        android:layout_width="match_parent" android:layout_height="64dp"
+        android:scaleType="fitCenter" android:importantForAccessibility="no" />
+    <TextView android:id="@+id/category_product_name" style="@style/NovaText"
+        android:layout_width="match_parent" android:layout_height="48dp"
+        android:layout_marginTop="6dp" android:gravity="center"
+        android:textSize="12sp" android:textStyle="bold" android:textColor="@color/nova_ink"
+        android:maxLines="3" android:ellipsize="end" android:importantForAccessibility="no" />
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Các khung giờ Flash Sale. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textSize="11sp"
+            android:textColor="@color/nova_blue"
+            android:textStyle="bold"
+            tools:text="09:00"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/nova_secondary_button"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textSize="11sp"
+            android:textColor="@color/nova_muted"
+            tools:text="12:00"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/nova_card"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:textSize="11sp"
+            android:textColor="@color/nova_muted"
+            tools:text="18:00"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/nova_card"/>
+    </LinearLayout>
+</LinearLayout>

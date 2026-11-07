@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Khối tạm tính và tổng tiền giỏ hàng. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Tổng thanh toán"/>
+        <Space android:layout_width="1dp" android:layout_height="7dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Tạm tính  25.980.000₫&#10;Phí vận chuyển  0₫"/>
+        <Space android:layout_width="1dp" android:layout_height="9dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_brand"
+            android:textStyle="bold"
+            tools:text="25.980.000₫"/>
+    </LinearLayout>
+</LinearLayout>

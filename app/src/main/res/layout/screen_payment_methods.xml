@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp lựa chọn từ API và lưu phương thức cho phiên đặt hàng. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ns0="http://schemas.android.com/tools"
+    android:id="@+id/screen_payment_methods_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" ns0:context=".MainActivity" ns0:showIn="@layout/preview_screen_payment_methods">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/nova_card">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tổng thanh toán"
+            android:textStyle="bold"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/method_total"
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textStyle="bold"
+            android:textSize="17sp" ns0:text="5.990.000₫"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/method_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview" ns0:layout="@layout/preview_payment_methods_method_options" ns0:visibility="visible"/>
+    </LinearLayout>
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:text="Kiểm tra phương thức và tổng tiền trước khi đặt hàng."
+        android:textStyle="normal"
+        android:gravity="center_vertical"
+        android:clickable="false"
+        android:focusable="false"/>
+</LinearLayout>

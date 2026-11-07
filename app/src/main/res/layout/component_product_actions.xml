@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Thanh nút Thêm vào giỏ và Mua ngay của màn chi tiết sản phẩm khi dùng bản đầy đủ. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:baselineAligned="false"
+    android:padding="16dp"
+    android:background="@color/nova_white"
+    tools:context=".MainActivity">
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:id="@+id/product_add"
+        android:text="@string/screen_them_vao_gio"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginEnd="10dp" />
+    <TextView
+        style="@style/NovaButtonPrimary"
+        android:id="@+id/product_buy"
+        android:text="@string/screen_mua_ngay"
+        android:layout_width="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

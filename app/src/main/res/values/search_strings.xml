@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nhãn thanh tìm kiếm, lịch sử, gợi ý và các nút liên quan. -->
+<resources>
+    <string name="nova_search_back">Quay lại</string>
+    <string name="nova_search_hint">Tên sản phẩm, thương hiệu…</string>
+    <string name="nova_search_clear">Xóa từ khóa</string>
+    <string name="nova_search_submit">Tìm</string>
+    <string name="nova_search_recent">Tìm kiếm gần đây</string>
+    <string name="nova_search_clear_history">Xóa tất cả</string>
+    <string name="nova_search_categories">Khám phá theo danh mục</string>
+    <string name="nova_search_keywords">Có phải bạn muốn tìm?</string>
+    <string name="nova_search_products">Sản phẩm gợi ý</string>
+    <string name="nova_search_retry">Thử lại</string>
+    <string name="nova_search_show_all">Xem tất cả kết quả  →</string>
+</resources>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp lịch sử, gửi tin nhắn và làm mới hội thoại. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_chat_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_chat">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"
+        android:text="@string/module_chat_intro"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/screen_body">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_chat_screen_body"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:text="@string/module_chat_message"
+        android:textStyle="bold"
+        android:labelFor="@+id/chat_message"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/chat_message"
+        android:inputType="textMultiLine"
+        android:importantForAutofill="no"
+        android:singleLine="false"
+        android:minLines="3"
+        android:gravity="top|start"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/chat_send" android:text="@string/module_chat_send"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/chat_refresh" android:text="@string/module_chat_refresh"/>
+</LinearLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Khối ưu đãi chớp nhoáng đang hoạt động. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/nova_white"
+        android:textStyle="bold"
+        tools:text="Ưu đãi chớp nhoáng"/>
+    <Space android:layout_width="1dp" android:layout_height="5dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/nova_on_blue_muted"
+        tools:text="Deal đang diễn ra  ·  01:24:36"/>
+    <Space android:layout_width="1dp" android:layout_height="10dp"/>
+    <TextView style="@style/NovaButtonSecondary" tools:text="Xem tất cả Flash Sale  →"/>
+</LinearLayout>

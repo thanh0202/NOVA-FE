@@ -1,0 +1,60 @@
+<!-- NOVA: Style chữ, nút, ô nhập và lựa chọn dùng chung trong XML. -->
+<resources>
+    <style name="NovaText">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/nova_ink</item>
+    </style>
+    <style name="NovaButtonPrimary" parent="NovaText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/nova_white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/nova_primary_button</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="NovaButtonSecondary" parent="NovaButtonPrimary">
+        <item name="android:textColor">@color/nova_brand</item>
+        <item name="android:background">@drawable/nova_secondary_button</item>
+    </style>
+    <style name="NovaField" parent="NovaText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">15dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textColorHint">@color/nova_muted</item>
+        <item name="android:background">@drawable/nova_field</item>
+    </style>
+    <style name="NovaSegment" parent="NovaText">
+        <item name="android:layout_width">0dp</item><item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item><item name="android:gravity">center</item>
+        <item name="android:textSize">13sp</item><item name="android:textColor">@color/nova_muted</item>
+        <item name="android:clickable">true</item><item name="android:focusable">true</item>
+    </style>
+    <style name="NovaSearchPanel">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">14dp</item>
+        <item name="android:background">@drawable/nova_card</item>
+    </style>
+    <style name="NovaSearchSectionTitle" parent="NovaText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">36dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

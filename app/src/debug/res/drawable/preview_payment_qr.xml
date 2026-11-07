@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Tài nguyên debug/Preview preview_payment_qr; hỗ trợ xem bố cục hoặc cấu hình thử nghiệm theo biến thể debug. -->
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="25"
+    android:viewportHeight="25">
+    <path android:fillColor="#FFFFFF" android:pathData="M0,0h25v25h-25z"/>
+    <path
+        android:fillColor="#101D35"
+        android:pathData="M2,2h7v7h-7zM16,2h7v7h-7zM2,16h7v7h-7zM11,3h2v3h-2zM10,8h4v2h-4zM3,11h4v3h-4zM9,12h3v3h-3zM13,11h3v3h-3zM18,11h4v2h-4zM12,16h3v3h-3zM17,15h3v3h-3zM21,17h2v5h-2zM16,20h4v3h-4zM11,21h3v2h-3z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M3,3h5v5h-5zM17,3h5v5h-5zM3,17h5v5h-5z"/>
+    <path android:fillColor="#101D35" android:pathData="M4,4h3v3h-3zM18,4h3v3h-3zM4,18h3v3h-3z"/>
+</vector>

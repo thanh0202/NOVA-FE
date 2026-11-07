@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nhãn dùng chung của thẻ địa chỉ và voucher. -->
+<resources>
+    <string name="nova_voucher_use">Dùng ưu đãi</string>
+    <string name="nova_address_default">Mặc định</string>
+</resources>

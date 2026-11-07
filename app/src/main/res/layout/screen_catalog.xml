@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp lưới sản phẩm theo danh mục, hỗ trợ chuyển nhóm, từ khóa, sắp xếp và lọc. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ns0="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" ns0:context=".MainActivity" ns0:showIn="@layout/preview_screen_catalog">
+    <TextView
+        android:id="@+id/catalog_search"
+        style="@style/NovaButtonSecondary"
+        android:text="Tìm trong danh mục…"
+        android:gravity="center_vertical"
+        android:textStyle="normal"
+        android:drawableStart="@drawable/ic_nova_search"
+        android:drawablePadding="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"
+        android:background="@drawable/nova_search" ns0:text="Tìm trong danh mục âm thanh"/>
+    <TextView
+        android:id="@+id/catalog_parent"
+        style="@style/NovaText"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:gravity="center_vertical"
+        android:text="‹  Danh mục"
+        android:textSize="11sp"
+        android:textColor="@color/nova_brand"
+        android:clickable="true"
+        android:focusable="true" ns0:text="Âm thanh"/>
+    <HorizontalScrollView
+        android:id="@+id/catalog_category_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:clipToPadding="false">
+        <LinearLayout
+            android:id="@+id/catalog_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+            <ViewStub
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tag="nova_preview" ns0:layout="@layout/preview_catalog_catalog_categories" ns0:visibility="visible"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:baselineAligned="false">
+        <TextView
+            android:id="@+id/catalog_context_title"
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Sản phẩm"
+            android:textSize="22sp"
+            android:textStyle="bold" ns0:text="Âm thanh"/>
+        <TextView
+            android:id="@+id/catalog_result_summary"
+            style="@style/NovaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đang tải…"
+            android:textSize="11sp"
+            android:textColor="@color/nova_muted" ns0:text="5 sản phẩm"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/catalog_subtitle"
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="16dp"
+        android:text="Chọn sản phẩm phù hợp với bạn."
+        android:textSize="11sp"
+        android:textColor="@color/nova_muted" ns0:text="Tai nghe và loa cho mọi khoảnh khắc."/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:id="@+id/catalog_filter"
+            style="@style/NovaText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="16dp"
+            android:gravity="center"
+            android:text="☷  Bộ lọc"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/nova_blue"
+            android:background="@drawable/nova_secondary_button"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            android:id="@+id/catalog_sort"
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:paddingHorizontal="14dp"
+            android:gravity="center_vertical"
+            android:text="Bán chạy  ⌄"
+            android:textSize="12sp"
+            android:background="@drawable/nova_field"
+            android:clickable="true"
+            android:focusable="true" ns0:text="Phổ biến nhất"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/catalog_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview" ns0:layout="@layout/preview_catalog_catalog_grid" ns0:visibility="visible"/>
+    </LinearLayout>
+</LinearLayout>

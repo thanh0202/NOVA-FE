@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Thẻ voucher miễn phí giao hàng. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/nova_card"
+    android:padding="18dp"
+    android:elevation="0.5dp">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/nova_blue"
+        android:textStyle="bold"
+        tools:text="FREESHIP"
+        android:id="@+id/voucher_code"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        tools:text="Miễn phí giao hàng"
+        android:id="@+id/voucher_name"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="@color/nova_muted"
+        tools:text="Đơn tối thiểu 500.000₫&#10;Hạn dùng 30/11/2026"
+        android:id="@+id/voucher_terms"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_brand"
+        android:textStyle="bold"
+        android:id="@+id/voucher_use"
+        android:text="@string/nova_voucher_use"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:clickable="true"
+        android:focusable="true"/>
+</LinearLayout>

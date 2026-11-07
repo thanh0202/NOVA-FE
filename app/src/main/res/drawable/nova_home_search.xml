@@ -1,0 +1,2 @@
+<!-- NOVA: Nền hình học: màu, viền, bo góc hoặc kích thước của thành phần giao diện. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"><solid android:color="#FFFFFF"/><corners android:radius="16dp"/></shape>

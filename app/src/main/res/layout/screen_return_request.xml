@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Chọn hình thức, món, số lượng và lý do rồi gửi yêu cầu. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_return_request_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_return_request">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đơn hàng"
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"/>
+    <Space android:layout_width="1dp" android:layout_height="7dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/return_request_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đang tải…"
+        android:textSize="20sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        tools:text="Đơn hàng NOVA-1024"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/return_request_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn sản phẩm, số lượng và mô tả lý do. Hệ thống sẽ kiểm tra thời hạn và số lượng đủ điều kiện đổi trả."
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hình thức yêu cầu"
+        android:textSize="18sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <RadioGroup
+        android:id="@+id/return_request_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/return_request_refund">
+        <RadioButton
+            android:id="@+id/return_request_refund"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Trả hàng và hoàn tiền"
+            android:textSize="13sp"
+            tools:checked="true"/>
+        <RadioButton
+            android:id="@+id/return_request_exchange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Đổi sản phẩm"
+            android:textSize="13sp"/>
+    </RadioGroup>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sản phẩm cần đổi trả"
+        android:textSize="18sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <LinearLayout
+        android:id="@+id/return_request_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_return_request_return_request_items"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lý do đổi trả"
+        android:textSize="14sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:labelFor="@+id/return_request_reason"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/return_request_reason"
+        android:hint="Mô tả tình trạng sản phẩm và yêu cầu của bạn"
+        android:inputType="textMultiLine|textCapSentences"
+        android:singleLine="false"
+        android:minLines="4"
+        android:gravity="top"
+        android:maxLength="1000"
+        android:importantForAutofill="no"
+        tools:text="Sản phẩm có lỗi khi sử dụng."/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/return_request_submit" android:text="Gửi yêu cầu đổi trả"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/return_request_cancel" android:text="Quay lại đơn hàng"/>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+</LinearLayout>

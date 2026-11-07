@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Ghép địa chỉ, phương thức, voucher và ghi chú. Yêu cầu báo giá trước khi gửi đơn. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_checkout_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_checkout">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="11sp"
+        android:textColor="@color/nova_brand"
+        android:textStyle="bold"
+        android:text="@string/screen_gio_hang_thong_tin_thanh_toan"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:elevation="1dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            android:text="@string/screen_dia_chi_giao_hang"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="normal"
+            android:text="@string/screen_dang_tai_dia_chi"
+            android:id="@+id/checkout_address"
+            tools:text="Nguyễn Minh Anh  ·  0900 000 001&#10;12 Nguyễn Huệ, TP. Hồ Chí Minh"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_brand"
+            android:textStyle="bold"
+            android:text="@string/screen_thay_doi"
+            android:id="@+id/checkout_change_address"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:elevation="1dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            android:text="@string/screen_phuong_thuc_thanh_toan"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <TextView android:id="@+id/checkout_methods" style="@style/NovaButtonSecondary" tools:text="Thanh toán khi nhận hàng  ›"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:elevation="1dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            android:text="@string/screen_ma_giam_gia"
+            android:labelFor="@+id/checkout_voucher"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <EditText
+            style="@style/NovaField"
+            android:id="@+id/checkout_voucher"
+            android:inputType="text"
+            android:importantForAutofill="no"/>
+        <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+        <TextView
+            style="@style/NovaButtonSecondary"
+            android:id="@+id/checkout_apply"
+            android:text="@string/screen_ap_dung_ma_cap_nhat_gia"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_brand"
+            android:textStyle="bold"
+            android:text="@string/screen_xem_ma_uu_dai"
+            android:id="@+id/checkout_vouchers"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:text="@string/screen_ghi_chu_don_hang"
+        android:labelFor="@+id/checkout_note"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/checkout_note"
+        android:inputType="text"
+        android:importantForAutofill="no"
+        tools:text="Giao giờ hành chính"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/checkout_summary"
+        android:background="@drawable/nova_card"
+        android:padding="16dp"
+        android:elevation="1dp">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_checkout_checkout_summary"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView
+        style="@style/NovaButtonPrimary"
+        android:id="@+id/checkout_place"
+        android:text="@string/screen_dang_tinh_tong_thanh_toan"
+        android:enabled="false"
+        android:alpha=".55"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<!-- NOVA: Chặn kết nối HTTP thuần trong cấu hình chính và tin cậy chứng chỉ hệ thống. -->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false"><trust-anchors><certificates src="system" /></trust-anchors></base-config>
+</network-security-config>

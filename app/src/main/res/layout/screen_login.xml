@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nhập email và mật khẩu, ghi nhớ phiên, xử lý tài khoản chưa xác thực và điều hướng sang đăng ký hoặc quên mật khẩu. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_login_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_login">
+    <include layout="@layout/component_auth_brand"/>
+    <Space android:layout_width="1dp" android:layout_height="26dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:text="@string/screen_chao_mung_tro_lai"/>
+    <Space android:layout_width="1dp" android:layout_height="10dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/nova_muted"
+        android:textStyle="normal"
+        android:text="@string/screen_dang_nhap_de_kham_pha_cong_nghe_moi_nhat_va_nhung_uu_dai_dan"/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <include layout="@layout/component_auth_form"/>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Ghi nhận địa chỉ cho đơn đang đặt rồi quay lại thanh toán. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_select_address_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_select_address">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"
+        android:text="@string/module_select_address_intro"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/addresses_add" android:text="@string/module_select_address_add"/>
+    <Space android:layout_width="1dp" android:layout_height="@dimen/nova_section_gap"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/screen_body">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/addresses_list">
+            <ViewStub
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="nova_preview"
+                tools:layout="@layout/preview_select_address_addresses_list"
+                tools:visibility="visible"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Hiển thị số tiền, hướng dẫn, QR hoặc cổng thanh toán và theo dõi trạng thái giao dịch. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_payment_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="20dp"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_payment">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quét mã QR hoặc mở cổng thanh toán. NOVA tự kiểm tra trạng thái khi bạn ở màn hình này."
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:padding="20dp"
+        android:background="@drawable/nova_card">
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/payment_order_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải đơn hàng…"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:text="Đơn hàng NOVA-1024"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/payment_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/nova_blue"
+            tools:text="529.000 đ"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/payment_method"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textSize="13sp"
+            tools:text="Phương thức: QR"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/payment_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Đang kiểm tra trạng thái…"
+            android:textSize="13sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Đang chờ thanh toán"/>
+    </LinearLayout>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_countdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="Đang tải thời hạn thanh toán…"
+        android:textStyle="bold"
+        android:textSize="19sp"
+        android:textColor="@color/nova_brand"
+        android:accessibilityLiveRegion="none"
+        tools:text="Thời gian còn lại  ·  09:42"/>
+    <ImageView
+        android:id="@+id/payment_qr"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:background="@drawable/nova_card"
+        android:scaleType="fitCenter"
+        android:visibility="gone"
+        android:contentDescription="Mã QR chứa thông tin thanh toán đơn hàng"
+        tools:visibility="visible"
+        tools:src="@drawable/preview_payment_qr"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_qr_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Không thể hiển thị mã QR. Hãy mở cổng thanh toán hoặc liên hệ hỗ trợ."
+        android:textSize="13sp"
+        android:visibility="gone"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_expires"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        android:textSize="11sp"
+        android:textColor="@color/nova_muted"
+        tools:text="Hết hạn sau 10 phút"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"
+        tools:text="Mở ứng dụng ngân hàng và quét mã QR để thanh toán."/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_demo_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="14dp"
+        android:background="#FFFFF4DB"
+        android:textColor="#FF9E6900"
+        android:text="MÔI TRƯỜNG THỬ NGHIỆM · Không chuyển tiền thật. Chỉ nút mô phỏng bên dưới mới gửi yêu cầu thử nghiệm."
+        android:textSize="12sp"
+        android:visibility="gone"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/payment_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#FFB42318"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:accessibilityLiveRegion="polite"/>
+    <TextView
+        style="@style/NovaButtonPrimary"
+        android:id="@+id/payment_open_gateway"
+        android:layout_marginTop="20dp"
+        android:text="Mở cổng thanh toán"
+        android:visibility="gone"/>
+    <TextView
+        style="@style/NovaButtonPrimary"
+        android:id="@+id/payment_refresh"
+        android:layout_marginTop="16dp"
+        android:text="Kiểm tra trạng thái"/>
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:id="@+id/payment_retry"
+        android:layout_marginTop="12dp"
+        android:text="Kiểm tra / tạo lại thanh toán"
+        android:visibility="gone"/>
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:id="@+id/payment_order"
+        android:layout_marginTop="12dp"
+        android:text="Xem đơn hàng"
+        android:enabled="false"/>
+    <TextView
+        style="@style/NovaButtonSecondary"
+        android:id="@+id/payment_demo_success"
+        android:layout_marginTop="12dp"
+        android:text="Mô phỏng thanh toán thành công (demo)"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+</LinearLayout>

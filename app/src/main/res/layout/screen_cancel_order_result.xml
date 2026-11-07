@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Nạp trạng thái sau khi hủy và thông tin hoàn tiền nếu có. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_cancel_order_result_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_cancel_order_result">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="✓"
+        android:textSize="64sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingTop="24dp"
+        android:paddingBottom="18dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/cancel_result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đang kiểm tra kết quả…"
+        android:textSize="24sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        android:gravity="center"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/cancel_result_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đang tải trạng thái hủy đơn và hoàn tiền từ máy chủ."
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"
+        android:gravity="center"/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="18dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đơn hàng"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/cancel_result_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textSize="18sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Đơn hàng NOVA-1024"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/cancel_result_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải trạng thái hoàn tiền…"
+            android:textSize="14sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="5.990.000₫"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_cancel_order_result_screen_body"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/cancel_result_refunds" android:text="Theo dõi hoàn tiền"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/cancel_result_detail" android:text="Xem chi tiết đơn hàng"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/cancel_result_home" android:text="Về trang chủ"/>
+</LinearLayout>

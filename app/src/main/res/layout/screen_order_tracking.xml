@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Hiển thị mã vận đơn, địa chỉ và lịch sử trạng thái vận chuyển. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_order_tracking_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_order_tracking">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="18dp">
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/order_tracking_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải trạng thái…"
+            android:textSize="22sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Đang giao"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/order_tracking_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đơn hàng"
+            android:textSize="13sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Đơn hàng NOVA-1024"/>
+        <Space android:layout_width="1dp" android:layout_height="12dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/order_tracking_waybill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải mã vận đơn…"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Mã vận đơn: GHN1024"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Địa chỉ nhận hàng"
+        android:textSize="17sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"/>
+    <Space android:layout_width="1dp" android:layout_height="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="18dp">
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/order_tracking_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải địa chỉ…"
+            android:textSize="13sp"
+            android:textColor="@color/nova_muted"
+            tools:text="12 Nguyễn Huệ, TP. Hồ Chí Minh"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hành trình đơn hàng"
+        android:textSize="20sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thông tin được cập nhật từ hệ thống xử lý đơn hàng."
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"/>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ViewStub
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:tag="nova_preview"
+            tools:layout="@layout/preview_order_tracking_screen_body"
+            tools:visibility="visible"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/order_tracking_refresh" android:text="Làm mới trạng thái"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/order_tracking_detail" android:text="Xem chi tiết đơn hàng"/>
+</LinearLayout>

@@ -1,0 +1,4 @@
+<!-- NOVA: Biến thể theme cho thiết bị từ API 27. -->
+<resources>
+    <style name="Theme.Nova" parent="Theme.Nova.Base"><item name="android:windowLightNavigationBar">true</item></style>
+</resources>

@@ -1,0 +1,10 @@
+<!-- NOVA: Theme gốc cho ứng dụng. -->
+<resources>
+    <style name="Theme.Nova.Base" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item><item name="android:colorAccent">@color/nova_blue</item>
+        <item name="android:windowLightStatusBar">true</item><item name="android:statusBarColor">@color/nova_bg</item>
+        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:windowActionModeOverlay">true</item>
+    </style>
+    <style name="Theme.Nova" parent="Theme.Nova.Base" />
+</resources>

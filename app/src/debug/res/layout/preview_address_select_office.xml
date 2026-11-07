@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Địa chỉ văn phòng có nút chọn giao hàng. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/nova_card"
+    android:padding="18dp"
+    android:elevation="0.5dp">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"
+        tools:text="Nguyễn Minh Anh · Văn phòng"
+        android:id="@+id/address_item_title"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"
+        tools:text="0900 000 001"
+        android:id="@+id/address_item_phone"/>
+    <Space android:layout_width="1dp" android:layout_height="6dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="@color/nova_ink"
+        tools:text="Khu công nghệ cao, TP. Hồ Chí Minh"
+        android:id="@+id/address_item_location"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/nova_blue"
+        android:textStyle="bold"
+        android:text="@string/nova_address_default"
+        android:id="@+id/address_item_default"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        tools:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:baselineAligned="false"
+        android:gravity="center_vertical">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_brand"
+            android:textStyle="bold"
+            tools:text="Giao đến địa chỉ này"
+            android:id="@+id/address_item_action"
+            android:layout_weight="1"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="@color/nova_brand"
+            android:textStyle="bold"
+            android:text="@string/screen_xoa"
+            android:id="@+id/address_item_remove"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+</LinearLayout>

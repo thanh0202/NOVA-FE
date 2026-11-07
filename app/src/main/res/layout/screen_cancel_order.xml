@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Kiểm tra trạng thái, nhận lý do và gửi yêu cầu hủy. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/screen_cancel_order_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    tools:background="@color/nova_bg"
+    tools:showIn="@layout/preview_screen_cancel_order">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/nova_card"
+        android:padding="18dp">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đơn hàng cần hủy"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/cancel_order_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang tải…"
+            android:textSize="20sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="Đơn hàng NOVA-1024"/>
+        <Space android:layout_width="1dp" android:layout_height="10dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/cancel_order_total"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="—"
+            android:textSize="22sp"
+            android:textColor="@color/nova_ink"
+            android:textStyle="bold"
+            tools:text="5.990.000₫"/>
+        <Space android:layout_width="1dp" android:layout_height="8dp"/>
+        <TextView
+            style="@style/NovaText"
+            android:id="@+id/cancel_order_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đang kiểm tra thanh toán…"
+            android:textSize="12sp"
+            android:textColor="@color/nova_muted"
+            tools:text="Thanh toán khi nhận hàng"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:id="@+id/cancel_order_notice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sau khi hủy, Nova sẽ tạo yêu cầu hoàn tiền nếu đơn đã thanh toán. Trạng thái hoàn tiền được xác nhận bởi máy chủ."
+        android:textSize="13sp"
+        android:textColor="@color/nova_muted"/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lý do hủy đơn"
+        android:textSize="18sp"
+        android:textColor="@color/nova_ink"
+        android:textStyle="bold"/>
+    <Space android:layout_width="1dp" android:layout_height="10dp"/>
+    <RadioGroup android:id="@+id/cancel_order_reasons" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/cancel_order_change"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Tôi muốn thay đổi sản phẩm"
+            android:textSize="13sp"
+            tools:checked="true"/>
+        <RadioButton
+            android:id="@+id/cancel_order_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Tôi muốn thay đổi địa chỉ nhận hàng"
+            android:textSize="13sp"/>
+        <RadioButton
+            android:id="@+id/cancel_order_no_need"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Tôi không còn nhu cầu mua hàng"
+            android:textSize="13sp"/>
+        <RadioButton
+            android:id="@+id/cancel_order_other"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="Lý do khác"
+            android:textSize="13sp"/>
+    </RadioGroup>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <EditText
+        style="@style/NovaField"
+        android:id="@+id/cancel_order_reason"
+        android:hint="Nhập lý do hủy đơn"
+        android:inputType="textMultiLine|textCapSentences"
+        android:singleLine="false"
+        android:minLines="3"
+        android:gravity="top"
+        android:maxLength="500"
+        android:importantForAutofill="no"/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView style="@style/NovaButtonPrimary" android:id="@+id/cancel_order_submit" android:text="Xác nhận hủy đơn"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <TextView style="@style/NovaButtonSecondary" android:id="@+id/cancel_order_keep" android:text="Giữ đơn hàng"/>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <LinearLayout
+        android:id="@+id/screen_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"/>
+</LinearLayout>

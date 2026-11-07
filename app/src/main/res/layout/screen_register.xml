@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Kiểm tra biểu mẫu, gửi yêu cầu tạo tài khoản và mở bước xác thực email bằng OTP. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ns0="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" ns0:context=".MainActivity" ns0:showIn="@layout/preview_screen_register">
+    <TextView
+        android:id="@+id/auth_back"
+        style="@style/NovaText"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:gravity="center"
+        android:background="@drawable/nova_icon_action"
+        android:drawableStart="@drawable/ic_nova_form_back"
+        android:padding="12dp"
+        android:contentDescription="Quay lại"
+        android:clickable="true"
+        android:focusable="true"/>
+    <Space android:layout_width="1dp" android:layout_height="24dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tạo tài khoản mới"
+        android:textSize="28sp"
+        android:textStyle="bold"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gia nhập NOVA. Trải nghiệm mua sắm công nghệ cho riêng bạn."
+        android:textSize="12sp"
+        android:textColor="@color/nova_muted"
+        android:lineSpacingExtra="3dp"/>
+    <Space android:layout_width="1dp" android:layout_height="22dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Họ và tên"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:labelFor="@id/auth_name"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dp"
+        android:addStatesFromChildren="true"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@drawable/nova_field"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/figma_user_round"
+            android:importantForAccessibility="no"/>
+        <EditText
+            android:id="@+id/auth_name"
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="54dp"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="0dp"
+            android:background="@null"
+            android:hint="Nhập họ và tên"
+            android:textColorHint="@color/nova_muted"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:inputType="textPersonName|textCapWords"
+            android:maxLength="150"
+            android:importantForAutofill="no" ns0:text="Nguyễn Minh Anh"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:labelFor="@id/auth_email"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dp"
+        android:addStatesFromChildren="true"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@drawable/nova_field"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/node_6_19_imgmail"
+            android:importantForAccessibility="no"/>
+        <EditText
+            android:id="@+id/auth_email"
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="54dp"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="0dp"
+            android:background="@null"
+            android:hint="Nhập email của bạn"
+            android:textColorHint="@color/nova_muted"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:inputType="textEmailAddress"
+            android:maxLength="150"
+            android:importantForAutofill="no" ns0:text="minh.anh@example.com"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Số điện thoại"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:labelFor="@id/auth_phone"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dp"
+        android:addStatesFromChildren="true"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@drawable/nova_field"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/figma_smartphone"
+            android:importantForAccessibility="no"/>
+        <EditText
+            android:id="@+id/auth_phone"
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="54dp"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="0dp"
+            android:background="@null"
+            android:hint="Số điện thoại (tùy chọn)"
+            android:textColorHint="@color/nova_muted"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:maxLength="150"
+            android:importantForAutofill="no" ns0:text="0900 000 001"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mật khẩu"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:labelFor="@id/auth_password"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dp"
+        android:addStatesFromChildren="true"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@drawable/nova_field"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/node_6_19_imglockkeyhole"
+            android:importantForAccessibility="no"/>
+        <EditText
+            android:id="@+id/auth_password"
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="54dp"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="0dp"
+            android:background="@null"
+            android:hint="Tạo mật khẩu"
+            android:textColorHint="@color/nova_muted"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:maxLength="128"
+            android:importantForAutofill="no"/>
+        <ImageView
+            android:id="@+id/auth_eye"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:padding="9dp"
+            android:src="@drawable/node_6_19_imgeyeoff"
+            android:contentDescription="Hiện hoặc ẩn mật khẩu"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/auth_password_rules"
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:text="8+ ký tự · Hoa, thường, số và ký tự đặc biệt"
+        android:textSize="10sp"
+        android:textColor="@color/nova_muted"/>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận mật khẩu"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:labelFor="@id/auth_password_repeat"/>
+    <Space android:layout_width="1dp" android:layout_height="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="54dp"
+        android:addStatesFromChildren="true"
+        android:gravity="center_vertical"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:background="@drawable/nova_field"
+        android:paddingHorizontal="16dp">
+        <ImageView
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/node_6_19_imglockkeyhole"
+            android:importantForAccessibility="no"/>
+        <EditText
+            android:id="@+id/auth_password_repeat"
+            style="@style/NovaText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="54dp"
+            android:paddingVertical="14dp"
+            android:paddingHorizontal="0dp"
+            android:background="@null"
+            android:hint="Nhập lại mật khẩu"
+            android:textColorHint="@color/nova_muted"
+            android:textSize="14sp"
+            android:singleLine="true"
+            android:inputType="textPassword"
+            android:maxLength="128"
+            android:importantForAutofill="no"/>
+        <ImageView
+            android:id="@+id/auth_eye_repeat"
+            android:layout_width="36dp"
+            android:layout_height="48dp"
+            android:padding="9dp"
+            android:src="@drawable/node_6_19_imgeyeoff"
+            android:contentDescription="Hiện hoặc ẩn mật khẩu"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+    <Space android:layout_width="1dp" android:layout_height="16dp"/>
+    <CheckBox
+        android:id="@+id/auth_terms"
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="Tôi đồng ý với Điều khoản sử dụng và Chính sách bảo mật của NOVA."
+        android:textSize="11sp"
+        android:buttonTint="@color/nova_blue"/>
+    <CheckBox
+        android:id="@+id/auth_remember"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:checked="true"/>
+    <TextView
+        android:id="@+id/auth_submit"
+        style="@style/NovaButtonPrimary"
+        android:layout_marginTop="12dp"
+        android:text="Tạo tài khoản  →"/>
+    <TextView
+        android:id="@+id/auth_switch"
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="Đã có tài khoản? Đăng nhập"
+        android:textColor="@color/nova_blue"
+        android:textSize="12sp"
+        android:clickable="true"
+        android:focusable="true"/>
+    <Space android:layout_width="1dp" android:layout_height="18dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="An toàn và riêng tư. An tâm mua sắm."
+        android:textSize="11sp"
+        android:textColor="@color/nova_muted"
+        android:paddingVertical="6dp"/>
+</LinearLayout>

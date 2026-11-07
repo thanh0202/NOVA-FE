@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- NOVA: Tiêu đề chương trình Flash Sale và bộ đếm thời gian. -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/nova_blue_card"
+    android:padding="16dp"
+    android:elevation="1dp">
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="10sp"
+        android:textColor="@color/nova_on_blue_muted"
+        android:textStyle="bold"
+        android:text="@string/screen_uu_dai_chop_nhoang"/>
+    <Space android:layout_width="1dp" android:layout_height="10dp"/>
+    <TextView
+        style="@style/NovaText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:textColor="@color/nova_white"
+        android:textStyle="bold"
+        android:id="@+id/flash_banner_name"
+        tools:text="Giờ vàng công nghệ"/>
+    <Space android:layout_width="1dp" android:layout_height="12dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:baselineAligned="false">
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/nova_white"
+            android:textStyle="bold"
+            android:text="@string/screen_dang_cap_nhat_thoi_gian"
+            android:id="@+id/flash_banner_timer"
+            tools:text="Kết thúc sau  "/>
+        <TextView
+            style="@style/NovaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/nova_white"
+            android:textStyle="bold"
+            android:id="@+id/flash_banner_seconds"
+            tools:text="01:24:36"/>
+    </LinearLayout>
+</LinearLayout>
