@@ -1,4 +1,4 @@
-# Android NOVA2
+# Android NOVA
 
 Ứng dụng Android native Java/XML, package `com.example.nova`.
 
